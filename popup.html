@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Day</title>
+    <style>
+        body {
+            font-family: 'Borel', sans-serif; /* Custom font, replace with your desired font */
+            font-size: 48px;
+            background-color: rgba(0, 0, 0, 0); /* Transparent background */
+            color: rgb(255, 255, 255); /* White text color */
+            text-align: center;
+            margin: 0;
+            height: 100vh; /* Full height of the viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Centers text vertically and horizontally */
+        }
+
+        /* Optional: Add some extra styling */
+        #day {
+            font-weight: bold;
+        }
+        hr {
+            width: 80px; /* Adjusted length */
+            border: none;
+            border-top: 6px solid white; /* White line */
+            border-radius: 3px; /* Rounded ends */
+            position: relative;
+            top: -8px; /* Moves the line slightly up */
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+
+    </style>
+    <script>
+        window.onload = function() {
+            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var currentDay = new Date().getDay(); // Get the current day (0-6)
+            document.getElementById('day').innerText = days[currentDay]; // Display the current day
+        };
+    </script>
+</head>
+<body>
+    <hr ><div id="day"></div><hr> <!-- This will display the current day -->
+</body>
+</html>
